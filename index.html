@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaqueries.css">
   <title>Interactive card details form</title>
 
 </head>
@@ -23,11 +24,14 @@
           <p class="cardNumberP">0000 0000 0000 0000</p>
           <div>
             <span class="nameSpan">IAN VIEIRA</span>
-            <span>04/23</span>
+            <span>
+              <span class="monthSpan">04</span>/
+              <span class="yearSpan">23</span>
+            </span>
           </div>
         </div>
         <div class="card-back">
-          <p>123</p>
+          <p class="cvcP">123</p>
         </div>
       </div>
       <form action="POST">
@@ -35,7 +39,7 @@
         <input type="text" name="name" class="name" placeholder="Ex.: Ian V de Souza">
         <label for="card-number">Número do cartão</label>
         <input type="text" name="card-number" class="cardNumber" placeholder="Ex.: 1234 5678 9123 0000" maxlength="19">
-        
+
         <div class="date-cvc">
           <div class="date">
             <label for="date">Exp Date (MM/AA)</label>
@@ -47,7 +51,7 @@
             <input type="text" name="cvc" id="cvc" placeholder="Ex.: 123" maxlength="3">
           </div>
         </div>
-        
+
         <button type="submit">Confirmar</button>
       </form>
     </div>
