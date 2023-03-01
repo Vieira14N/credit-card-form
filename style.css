@@ -19,11 +19,18 @@
     width: 80%;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 /* Cards */
+
+.cards{
+    background-color: aqua;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
 
 .cards .card-front {
     background-image: url(images/bg-card-front.png);
@@ -31,9 +38,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 400px;
-    height: 200px;
+    width: 80%;
+    height: 14rem;
     border-radius: 10px;
+    
 }
 
 .cards .card-back {
@@ -42,7 +50,28 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 400px;
-    height: 200px;
+    width: 80%;
+    height: 14rem;
     border-radius: 10px;
+    margin-top: 30px;
+    align-self: flex-end;
+}
+
+/* Form */
+
+form {
+    background-color: blue;
+    width: 50%;
+}
+
+form label {
+    display: block;
+}
+
+.date-cvc {
+    display: flex;
+}
+
+.date-cvc input {
+    width: 40px;
 }

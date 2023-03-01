@@ -17,14 +17,28 @@
     <div class="content-container">
       <div class="cards">
         <div class="card-front">
-          
+
         </div>
-        <div class="card-back">
+        <div class="card-back align">
 
         </div>
       </div>
       <form action="POST">
-
+        <label for="name">Nome impresso no cartão</label>
+        <input type="text" name="name" id="name" placeholder="Ex.: Ian V de Souza">
+        <label for="card-number">Número do cartão</label>
+        <input type="text" name="card-number" id="card-number" placeholder="Ex.: 1234 5678 9123 0000">
+        <div class="date-cvc">
+          <div class="date">
+            <label for="date">Exp Date (MM/AA)</label>
+            <input type="text" name="month" id="month">
+            <input type="text" name="year" id="year">
+          </div>
+          <div class="cvc">
+            <label for="date">CVC</label>
+            <input type="text" name="cvc" id="cvc">
+          </div>
+        </div>
       </form>
     </div>
   </section>
