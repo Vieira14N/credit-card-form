@@ -19,32 +19,41 @@
     <div class="content-container">
       <div class="cards">
         <div class="card-front">
-
+          <img src="images/card-logo.svg" alt="logo" width="70px">
+          <p class="cardNumberP">0000 0000 0000 0000</p>
+          <div>
+            <span class="nameSpan">IAN VIEIRA</span>
+            <span>04/23</span>
+          </div>
         </div>
-        <div class="card-back align">
-
+        <div class="card-back">
+          <p>123</p>
         </div>
       </div>
       <form action="POST">
         <label for="name">Nome impresso no cartão</label>
-        <input type="text" name="name" id="name" placeholder="Ex.: Ian V de Souza">
+        <input type="text" name="name" class="name" placeholder="Ex.: Ian V de Souza">
         <label for="card-number">Número do cartão</label>
-        <input type="text" name="card-number" id="card-number" placeholder="Ex.: 1234 5678 9123 0000">
+        <input type="text" name="card-number" class="cardNumber" placeholder="Ex.: 1234 5678 9123 0000" maxlength="19">
+        
         <div class="date-cvc">
           <div class="date">
             <label for="date">Exp Date (MM/AA)</label>
-            <input type="text" name="month" id="month" placeholder="MM">
-            <input type="text" name="year" id="year" placeholder="AA">
+            <input type="text" name="month" id="month" placeholder="MM" maxlength="2">
+            <input type="text" name="year" id="year" placeholder="AA" maxlength="2">
           </div>
           <div class="cvc">
             <label for="date">CVC</label>
-            <input type="text" name="cvc" id="cvc" placeholder="Ex.: 123">
+            <input type="text" name="cvc" id="cvc" placeholder="Ex.: 123" maxlength="3">
           </div>
         </div>
+        
         <button type="submit">Confirmar</button>
       </form>
     </div>
   </section>
+
+  <script src="script.js"></script>
 
 </body>
 

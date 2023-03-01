@@ -47,7 +47,28 @@ body, input {
     width: 25rem;
     height: 14rem;
     border-radius: 10px;
-    
+    padding: 25px;
+}
+
+.cards .card-front img{
+    margin-bottom: 60px;
+}
+
+.cards .card-front p{
+    color: hsl(270, 3%, 87%);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.cards .card-front div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cards .card-front span{
+    color: hsl(270, 3%, 87%);
+    font-size: 14px;
+    text-transform: uppercase;
 }
 
 .cards .card-back {
@@ -61,6 +82,15 @@ body, input {
     border-radius: 10px;
     margin-top: 30px;
     align-self: flex-end;
+    position: relative;
+}
+
+.cards .card-back p{
+    position: absolute;
+    top: 99px;
+    right: 45px;
+    font-size: 16px;
+    color: white;
 }
 
 /* Form */
