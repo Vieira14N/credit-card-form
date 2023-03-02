@@ -18,6 +18,7 @@
 
   <section class="main-container">
     <div class="content-container">
+
       <div class="cards">
         <div class="card-front">
           <img src="images/card-logo.svg" alt="logo" width="70px">
@@ -34,9 +35,10 @@
           <p class="cvcP">123</p>
         </div>
       </div>
-      <form action="POST">
+
+      <form class="form">
         <label for="name">Nome impresso no cartão</label>
-        <input type="text" name="name" class="name" placeholder="Ex.: Ian V de Souza">
+        <input type="text" name="name" class="name" placeholder="Ex.: Ian V de Souza" maxlength="28">
         <label for="card-number">Número do cartão</label>
         <input type="text" name="card-number" class="cardNumber" placeholder="Ex.: 1234 5678 9123 0000" maxlength="19">
 
@@ -54,6 +56,14 @@
 
         <button type="submit">Confirmar</button>
       </form>
+
+      <form class="succeed-form hide">
+        <img src="images/icon-complete.svg" alt="">
+        <h2>OBRIGADO!</h2>
+        <p>Seus dados do cartão foram adicionados</p>
+        <button type="submit">Voltar</button>
+      </form>
+
     </div>
   </section>
 

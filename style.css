@@ -102,6 +102,10 @@ form {
     align-items: start;
 }
 
+.form.hide{
+    display:none;
+}
+
 form label {
     display: block;
     text-transform: uppercase;
@@ -162,3 +166,32 @@ form button {
     cursor: pointer;
 }
 
+/* Succeed form */
+
+.succeed-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.succeed-form.hide{
+    display: none;
+}
+
+.succeed-form img {
+    margin-bottom: 30px;
+}
+
+.succeed-form h2 {
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.succeed-form p {
+    color: hsl(279, 6%, 55%);
+    margin-bottom: 30px;
+}
+
+.succeed-form button {
+    font-size: 18px;
+}

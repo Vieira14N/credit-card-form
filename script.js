@@ -11,6 +11,12 @@ const cardNumberInput = document.querySelector('.cardNumber')
 const cardNumberP = document.querySelector('.cardNumberP')
 
 cardNumberInput.addEventListener('keyup', () => {
+    let inputLength = cardNumberInput.value.length;
+    
+    if(inputLength === 4 || inputLength === 9 || inputLength === 14){
+        cardNumberInput.value += ' ';
+    }
+
     cardNumberP.innerHTML = cardNumberInput.value;
 })
 
@@ -29,6 +35,8 @@ yearInput.addEventListener('keyup', () => {
     yearSpan.innerHTML = yearInput.value;
 })
 
+//cvc
+
 const cvcInput = document.getElementById('cvc')
 const cvcP = document.querySelector('.cvcP')
 
@@ -36,4 +44,19 @@ cvcInput.addEventListener('keyup', () => {
     cvcP.innerHTML = cvcInput.value;
 })
 
+//Form
 
+const form = document.querySelector('.form')
+const succeedForm = document.querySelector('.succeed-form')
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    form.classList.add('hide')
+    succeedForm.classList.remove('hide')
+})
+
+succeedForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    succeedForm.classList.add('hide')
+    form.classList.remove('hide')
+})
