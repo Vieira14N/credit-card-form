@@ -1,10 +1,31 @@
+// form verify functions
+
+function isEmpty(input){
+    input.addEventListener('focus', () => {
+        if(input.value === ''){
+            empty.classList.add('show')
+        }
+    })
+
+    input.addEventListener('keyup', () => {
+        if(input.value === ''){
+            empty.classList.add('show')
+        } else {
+            empty.classList.remove('show')
+        }
+    })
+}
+
 // name
 const nameInput = document.querySelector('.name')
 const nameSpan = document.querySelector('.nameSpan')
+const empty = document.querySelector('.empty')
 
 nameInput.addEventListener('keyup', () => {
     nameSpan.innerHTML = nameInput.value;
 })
+
+isEmpty(nameInput)
 
 //card number
 const cardNumberInput = document.querySelector('.cardNumber')

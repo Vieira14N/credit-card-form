@@ -111,6 +111,7 @@ form label {
     text-transform: uppercase;
     color: hsl(278, 68%, 11%);
     font-size: 14px;
+    margin-top: 24px;
 }
 
 form input {
@@ -120,11 +121,23 @@ form input {
     border: 1px hsl(270, 3%, 87%) solid;
     color: hsl(279, 6%, 55%);
     margin-top: 8px;
-    margin-bottom: 24px;
 }
 
 form input:focus{
     outline: 2px solid hsl(278, 94%, 30%);
+}
+
+form p{
+    font-size: 14px;
+    color: hsl(0, 100%, 66%);
+}
+
+.empty {
+    display: none;
+}
+
+.empty.show {
+    display: block;
 }
 
 .date-cvc {
@@ -155,6 +168,7 @@ form input:focus{
 
 form button {
     width: 100%;
+    margin-top: 24px;
     padding: 16px;
     border: none;
     border-radius: 10px;
