@@ -132,11 +132,11 @@ form p{
     color: hsl(0, 100%, 66%);
 }
 
-.empty {
+.empty, .error {
     display: none;
 }
 
-.empty.show {
+.empty.show, .error.show {
     display: block;
 }
 

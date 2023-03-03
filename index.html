@@ -38,24 +38,32 @@
 
       <form class="form">
         <label for="name">Nome impresso no cartão</label>
-        <input type="text" name="name" class="name" placeholder="Ex.: Ian V de Souza" maxlength="28" required>
+        <input type="text" name="name" class="name" placeholder="Ex.: Ian V de Souza" maxlength="28">
         <p class="empty">Campo vazio.</p>
         <label for="card-number">Número do cartão</label>
-        <input type="text" name="card-number" class="cardNumber" placeholder="Ex.: 1234 5678 9123 0000" maxlength="19" required>
+        <input type="text" name="card-number" class="cardNumber" placeholder="Ex.: 1234 5678 9123 0000" maxlength="19"
+          autocomplete="off">
         <p class="empty">Campo vazio.</p>
+        <p class="error">Campo inválido, insira apenas números.</p>
         <div class="date-cvc">
           <div class="date">
             <label for="date">Exp Date (MM/AA)</label>
-            <input type="text" name="month" id="month" placeholder="MM" maxlength="2" required>
-            <input type="text" name="year" id="year" placeholder="AA" maxlength="2" required>
+            <input type="text" name="month" id="month" placeholder="MM" maxlength="2">
+            <p class="empty">Campo vazio.</p>
+            <p class="error">Campo inválido, insira apenas números.</p>
+            <input type="text" name="year" id="year" placeholder="AA" maxlength="2">
+            <p class="empty">Campo vazio.</p>
+            <p class="error">Campo inválido, insira apenas números.</p>
           </div>
           <div class="cvc">
             <label for="date">CVC</label>
-            <input type="text" name="cvc" id="cvc" placeholder="Ex.: 123" maxlength="3" required>
+            <input type="text" name="cvc" id="cvc" placeholder="Ex.: 123" maxlength="3">
+            <p class="empty">Campo vazio.</p>
+            <p class="error">Campo inválido, insira apenas números.</p>
           </div>
         </div>
 
-        <button type="submit">Confirmar</button>
+        <button type="submit" disabled>Confirmar</button>
       </form>
 
       <form class="succeed-form hide">

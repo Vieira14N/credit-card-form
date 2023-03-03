@@ -1,31 +1,45 @@
 // form verify functions
+const empty = document.querySelectorAll('.empty')
+const error = document.querySelectorAll('.error')
 
-function isEmpty(input){
+function isEmpty(input,index){
     input.addEventListener('focus', () => {
         if(input.value === ''){
-            empty.classList.add('show')
+            empty[index].classList.add('show')
         }
     })
 
     input.addEventListener('keyup', () => {
         if(input.value === ''){
-            empty.classList.add('show')
+            empty[index].classList.add('show')
         } else {
-            empty.classList.remove('show')
+            empty[index].classList.remove('show')
         }
     })
 }
 
+
+function isNumber(input,index){
+    input.addEventListener('keyup', () => {
+        const num = Number(input.value.replaceAll(' ',''));
+        if(!num){
+            error[index].classList.add('show')
+        } else {
+            error[index].classList.remove('show')
+        }
+    })
+}
+
+
 // name
 const nameInput = document.querySelector('.name')
 const nameSpan = document.querySelector('.nameSpan')
-const empty = document.querySelector('.empty')
 
 nameInput.addEventListener('keyup', () => {
     nameSpan.innerHTML = nameInput.value;
 })
 
-isEmpty(nameInput)
+isEmpty(nameInput,0)
 
 //card number
 const cardNumberInput = document.querySelector('.cardNumber')
@@ -41,6 +55,9 @@ cardNumberInput.addEventListener('keyup', () => {
     cardNumberP.innerHTML = cardNumberInput.value;
 })
 
+isEmpty(cardNumberInput,1)
+isNumber(cardNumberInput,0)
+
 //month 'n year expire date
 const monthInput = document.getElementById('month')
 const monthSpan = document.querySelector('.monthSpan')
@@ -49,12 +66,18 @@ monthInput.addEventListener('keyup', () => {
     monthSpan.innerHTML = monthInput.value;
 })
 
+isEmpty(monthInput,2)
+isNumber(monthInput,1)
+
 const yearInput = document.getElementById('year')
 const yearSpan = document.querySelector('.yearSpan')
 
 yearInput.addEventListener('keyup', () => {
     yearSpan.innerHTML = yearInput.value;
 })
+
+isEmpty(yearInput,3)
+isNumber(yearInput,2)
 
 //cvc
 
@@ -64,6 +87,9 @@ const cvcP = document.querySelector('.cvcP')
 cvcInput.addEventListener('keyup', () => {
     cvcP.innerHTML = cvcInput.value;
 })
+
+isEmpty(cvcInput,4)
+isNumber(cvcInput,3)
 
 //Form
 
