@@ -96,10 +96,22 @@ isNumber(cvcInput,3)
 const form = document.querySelector('.form')
 const succeedForm = document.querySelector('.succeed-form')
 
+function validateForm(i1,i2,i3,i4,i5){
+    if(i1.value && i2.value && i3.value && i4.value && i5.value){
+        return true
+    } else {
+        return false
+    }
+}
+
+
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    form.classList.add('hide')
-    succeedForm.classList.remove('hide')
+    if(validateForm(nameInput,cardNumberInput,monthInput,yearInput,cvcInput)){
+        form.classList.add('hide')
+        succeedForm.classList.remove('hide')
+    }
 })
 
 succeedForm.addEventListener('submit', (e) => {
